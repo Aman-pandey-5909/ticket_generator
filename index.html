@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      width: 100%;
+      color: wheat;
+    }
+
+    .attribution a {
+      color: hsl(202, 62%, 44%);
+    }
+
+    #page1,
+    #page2 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Form starts -->
+  <nav class="Navbar">
+    <img src="./assets/images/logo-full.svg" alt="logo-full">
+  </nav>
+
+  <div id="page1" class="main">
+
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <p>Secure your spot at next years biggest coding cofference</p>
+    <!-- Form ends -->
+    <div class="formSection">
+      <form action="">
+        <div class="inputBoxPfp">
+          <label for="pfp">Upload Avatar</label>
+          <input  type="file" name="pfp" id="pfp">
+          <span class="pfpError"></span>
+          <div class="pfpButtons">
+            <button class="rmImg">Remove Image</button>
+            <button class="chImg">Change Image</button>
+          </div>
+        </div>
+        <div class="inputBoxName">
+          <label for="name">Full Name</label>
+          <input  type="text" name="name" id="name" placeholder="">
+          <span class="nameError"></span>
+        </div>
+        <div class="inputBoxemail">
+          <label for="email">Email Address</label>
+          <input  type="email" name="email" id="email" placeholder="example@mail.com">
+          <span class="emailError"></span>
+        </div>
+        <div class="inputBoxgit">
+          <label for="gituser">GitHub Username</label>
+          <input  type="text" name="gituser" id="gituser" placeholder="yourusername">
+          <span class="gitError"></span>
+        </div>
+        <button class="submitBtn" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- Form ends -->
+  <!-- Generated tickets starts -->
+  <div id="page2" class="main">
+    <h1 class="ticketHeader"></h1>
+    <p class="ticketPara"></p>
+    <div class="ticketBorder">
+      <div class="ticketTop">
+        <img src="./assets/images/logo-full.svg" alt="logo-full">
+        <span>Jan 21-23, 2025 / San Francisco</span>
+      </div>
+      <div class="ticketBottom">
+        <div class="ticketLeft"></div>
+        <div class="ticketRight">
+          <h1 class="tRName"></h1>
+          <p class="tRGit"><img src="./assets/images/icon-github.svg" alt="icon-github"><span></span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Generated tickets ends -->
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Aman pandey</a>.
+  </div>
+
+  <script src="/script.js"></script>
+
+
+</body>
+
+</html>

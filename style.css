@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./assets/fonts/static/Inconsolata-Regular.ttf') format('truetype'),
+        url('./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url('./assets/images/background-desktop.png') center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: 'Inconsolata', monospace, Arial, Helvetica, sans-serif;
+
+}
+
+* {
+    color: white;
+}
+
+.main h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    width: 50%;
+    margin: 20px auto 0 auto;
+    line-height: 1.2;
+}
+
+.main p {
+    text-align: center;
+    font-family: 'Inconsolata', monospace, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: rgb(146, 148, 150);
+
+}
+
+body::after {
+    content: "";
+    background: url('./assets/images/pattern-squiggly-line-bottom-desktop.svg');
+    background-size: cover;
+    background-position: bottom;
+    /* background-attachment: fixed; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5%;
+}
+
+.inputBoxName,
+.inputBoxemail,
+.inputBoxgit,
+.inputBoxPfp {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 10px;
+    margin: 20px 0;
+    font-family: 'Inconsolata', monospace, Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.inputBoxName input,
+.inputBoxemail input,
+.inputBoxgit input {
+    padding: 13px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.144);
+    outline: none;
+    border: 1px solid white;
+}
+
+.inputBoxPfp input {
+    padding: 13px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.144);
+    outline: 2px dashed white;
+    outline-offset: 0px;
+    border: none;
+    height: 15vh;
+    color: transparent;
+}
+
+
+
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+
+input[type="file"]::before {
+    content: "";
+    padding: 5px 10px;
+    background: rgba(94, 93, 93, 0.418);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: var(--uploaded-img, url('./assets/images/icon-upload.svg')); /* Default */
+    cursor: pointer;
+    /* position: absolute;
+    top:0;
+    left: 45%;
+    margin: 10px; */
+}
+
+input[type="file"]::after {
+    content: var(--textAfter, "Drag and drop or click to upload");
+    color: rgb(184, 181, 181);
+    /* text-align: bottom; */
+    width: 100%;
+    /* position: absolute;
+    top:60%;
+    left: 30%;
+    margin: 10px; */
+    display: flex;
+    /* border: 1px solid white; */
+    justify-content: center;
+}
+
+.inputBoxName label,
+.inputBoxemail label,
+.inputBoxgit label,
+.inputBoxPfp label {
+    font-size: 1.2rem;
+}
+
+.formSection {
+    position: relative;
+    z-index: 10;
+    width: 40%;
+    margin: 30px auto;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 13px 10px;
+    border-radius: 8px;
+    background: rgba(247, 142, 82, 0.932);
+    border: 1px solid white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Inconsolata', monospace, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.nameError,
+.emailError,
+.gitError,
+.pfpError {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.ticketBorder {
+    background: url('./assets/images/pattern-ticket.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    width: 50%;
+    height: 45vh;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ticketBorder .ticketTop img {
+    width: 40%;
+}
+
+.ticketBorder .ticketTop span {
+    font-size: 1.5em;
+    color: rgb(168, 164, 164);
+    /* position: absolute;
+    top: 120%;
+    left: 7%; */
+    padding: 0 7%;
+    margin: 0;
+}
+
+.ticketTop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ticketBottom {
+    border: 1px solid wheat;
+    display: flex;
+    justify-content: start;
+}
+
+.ticketBottom .ticketRight h1 {
+    margin: 0;
+    font-size: 2rem;
+    width: 100%;
+    text-align: start;
+}
+
+.ticketBottom .ticketRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.ticketBottom .ticketRight p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.5rem;
+    color: rgb(27, 27, 27);
+}
+
+.pfpButtons {
+    display: none;
+    position: absolute;
+    top: 67%;
+    /* display: flex; */
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.pfpButtons button {
+    padding: 5px 10px;
+    background: rgba(94, 93, 93, 0.418);
+}
