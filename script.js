@@ -96,6 +96,12 @@ form.addEventListener('submit', (e) => {
 
         const pfp = sessionStorage.getItem("pfp");
 
+        if (pfp) {
+            const imageSrc = JSON.parse(pfp);
+            const ticketLeft = document.querySelector('.ticketLeft img');
+            ticketLeft.src = imageSrc;
+        }
+
         const ticketHeader = document.querySelector('.ticketHeader');
         ticketHeader.innerHTML = `Congrats, ${userData.name}!<br>Your ticket is ready.`;
 
@@ -123,7 +129,13 @@ window.addEventListener("hashchange", () => {
 
 window.onload = () => {
     const storedUserData = sessionStorage.getItem("userData");
+    const pfp = sessionStorage.getItem("pfp");
 
+    if (pfp) {
+        const imageSrc = JSON.parse(pfp);
+        const ticketLeft = document.querySelector('.ticketLeft img');
+        ticketLeft.src = imageSrc;
+    }
     if (storedUserData) {
         const userData = JSON.parse(storedUserData);
         const ticketHeader = document.querySelector('.ticketHeader');

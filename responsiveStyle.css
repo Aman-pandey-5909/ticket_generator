@@ -1,0 +1,19 @@
+@media screen and (max-width: 500px) {
+    .main h1{
+        width: 95%;
+    }
+    .formSection {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .main h1{
+        width: 95%;
+    }
+    .formSection {
+        width: 95%;
+        margin: auto;
+    }
+}

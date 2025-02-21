@@ -29,6 +29,7 @@ body {
     width: 50%;
     margin: 20px auto 0 auto;
     line-height: 1.2;
+    /* border: 1px solid wheat; */
 }
 
 .main p {
@@ -177,7 +178,7 @@ input[type="file"]::after {
     background: url('./assets/images/pattern-ticket.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 50%;
     height: 45vh;
     margin: 30px auto;
@@ -185,6 +186,7 @@ input[type="file"]::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .ticketBorder .ticketTop img {
@@ -208,22 +210,27 @@ input[type="file"]::after {
 }
 
 .ticketBottom {
-    border: 1px solid wheat;
+    /* border: 1px solid wheat; */
     display: flex;
     justify-content: start;
+    align-items: center;
+    gap: 10px;
+    position: relative;
 }
 
 .ticketBottom .ticketRight h1 {
     margin: 0;
     font-size: 2rem;
     width: 100%;
-    text-align: start;
+    /* text-align: start; */
 }
 
 .ticketBottom .ticketRight {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-around;
+    /* border: 1px solid white; */
+    height: 100%;
 }
 
 .ticketBottom .ticketRight p {
@@ -234,6 +241,7 @@ input[type="file"]::after {
     font-size: 1.5rem;
     color: rgb(27, 27, 27);
 }
+
 
 .pfpButtons {
     display: none;
@@ -248,4 +256,15 @@ input[type="file"]::after {
 .pfpButtons button {
     padding: 5px 10px;
     background: rgba(94, 93, 93, 0.418);
+}
+
+.randomCode {
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    transform: rotate(90deg) scale(2);
+    /* transform: ; */
+    text-align: center;
+    /* border: 1px solid white; */
+    color: rgba(178, 179, 180, 0.644);
 }
